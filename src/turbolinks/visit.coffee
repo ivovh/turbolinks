@@ -140,6 +140,7 @@ class Turbolinks.Visit
     switch action
       when "replace" then "replaceHistoryWithLocationAndRestorationIdentifier"
       when "advance", "restore" then "pushHistoryWithLocationAndRestorationIdentifier"
+      when "back" then "backHistoryWithLocationAndRestorationIdentifier"
 
   shouldIssueRequest: ->
     if @action is "restore"
