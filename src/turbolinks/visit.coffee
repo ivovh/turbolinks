@@ -143,7 +143,7 @@ class Turbolinks.Visit
       when "back" then "backHistoryWithLocationAndRestorationIdentifier"
 
   shouldIssueRequest: ->
-    if @action is "restore"
+    if @action is "restore" or @action is "back"
       not @hasCachedSnapshot()
     else
       true
